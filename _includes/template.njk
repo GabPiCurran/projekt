@@ -12,10 +12,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <link rel="stylesheet" href="/CSS/style.css">
+    <link rel="stylesheet" href="/CSS/glide.core.min.css">
+	<link rel="stylesheet" href="/CSS/glide.theme.min.css">
 
 </head>
 
-<body>
     <body>
         <section>
             <header>
@@ -24,27 +25,35 @@
                     <a class="header__contact-email" href="mailto:info@cozybuddy.cz"><i class="fa-solid fa-envelope"></i>info@cozybuddy.cz</a>
                 </div>
     
-                <div class="header__logo">COZY BUDDY</div>
-                <div class="header__logo-description" >čalounictví a textilní doplňky</div>
+                <div class="header__logo"><a href="/" class="header__link">COZY BUDDY</a></div>
+                <div class="header__logo-description">ČALOUNICTVÍ A TEXTILNÍ DOPLŇKY</div>
             
             
-            
+        
                 <nav class="menu">
-                    <hr>
+                    
+                   <hr>
+                    <input type="checkbox" class="menu__checkbox" id="menu-checkbox">
+                    <label for="menu-checkbox" class="menu__toggler"><i class="fa-solid fa-bars">MENU</i></label>
+
+
                     <ul class="menu__list">
-                        
+                    
+
                         <li class="menu__item"><a href="/omne/" class="menu__link">O mně</a></li>
                         <li class="menu__item"><a href="/prodej/" class="menu__link">K prodeji</a></li>
                         <li class="menu__item"><a href="/textil/" class="menu__link">Textil</a></li>
                         <li class="menu__item"><a href="/galerie/" class="menu__link">Galerie</a></li>
                         <li class="menu__item"><a href="/cenik/" class="menu__link">Ceník a kontakt</a></li>
                     </ul>
-                    <hr>
+                  <hr>
                 </nav>
             </header>
     
     
-                <main>
+                <main class="main">
+                
+                {{ content | safe }}
             
                 </main>
     
@@ -57,6 +66,4 @@
         </section>    
     </body>
 
-    
-</body>
 </html>

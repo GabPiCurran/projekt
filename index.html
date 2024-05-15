@@ -3,7 +3,26 @@ layout: template.njk
 title: Homepage
 ---
 
-Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis, cumque cupiditate ducimus consequuntur saepe officiis unde earum et, impedit quisquam, ipsa nobis ea sed quo quos eligendi delectus rem. Voluptates!
-<!--
-<img class="photo" src="images/front_page.jpg" alt="nabytek">
--->
+<section class="front_page">
+
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+		  <ul class="glide__slides">
+			<li class="glide__slide"><img src="images/img-206.jpg" alt="Foto 1"></li>
+			<li class="glide__slide"><img src="images/sofa.JPG" alt="Foto 2"></li>
+			<li class="glide__slide"><img src="images/bio (25).JPG" alt="Foto 3"></li>
+		  </ul>
+		</div>
+
+		<script src="/glide.min.js"></script>
+
+		<script>
+		  new Glide('.glide', {
+			autoplay: 2000,
+			hoverpause: false,
+			type: 'carousel'
+		  }).mount()
+		</script>
+	</div>	
+
+</section>
